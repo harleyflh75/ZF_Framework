@@ -14,53 +14,27 @@
     </head>
 
     <body>
-        <!--Header Begin-->
-        <div id="header">
-            <div class="center">
-                <div id="logo"><a href="#">BN Tech</a></div>
-                <!--Menu Begin-->
-                <div id="menu">
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo">
+                    <a href="/">ZF<span>1.10.6</span></a>
+                </div>
+            </div>
+            <div id="content">
+                <div id="left">
                     <div id="nav">
                         <? echo $this->action('nav', 'menus', null, array('menu' => 'main')); ?>
+                        <?php echo $this->navigation()->menu(); ?>
                     </div>
                 </div>
-                <!--Menu END-->
+                <div id="right">
+			<?= $this->layout()->content ?>
+                </div>
+            </div>
+            <div id="footer">
+                <span id="copy"><a id="admin" href="/admin" target="_blank"> &copy;</a> 2010 BN Technology Group - All Rights Reserved</span>
             </div>
         </div>
-        <!--Header END-->
-
-        <!--Toprow Begin-->
-        <div id="toprow">
-            <div class="center">
-		<?= $this->layout()->content ?>
-            </div>
-        </div>
-        <!--Toprow END-->
-
-        <!--MiddleRow Begin-->
-        <div id="midrow">
-
-        </div>
-        <!--MiddleRow END-->
-
-        <!--BottomRow Begin-->
-        <div id="bottomrow">
-
-        </div>
-
-
-        <!--BottomRow END-->
-
-        <!--Footer Begin-->
-        <div id="footer">
-            <div class="foot">
-                <span><a href="/admin">&copy;</a> 2010 BN Technology Group - All Rights Reserved</span>
-            </div>
-        </div>
-        <!--Footer END-->
-
     </body>
-
-    
 
 </html>

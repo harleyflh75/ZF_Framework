@@ -1,0 +1,66 @@
+<?php
+/* @var $this Zend_View */
+?>
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+    <head>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headStyle() ?>
+        <?php echo $this->headScript() ?>
+        <base href="/" />
+    </head>
+
+    <body>
+        <!--Header Begin-->
+        <div id="header">
+            <div class="center">
+                <div id="logo"><a href="#">BN Tech</a></div>
+                <!--Menu Begin-->
+                <div id="menu">
+                    <div id="nav">
+                        <? echo $this->action('nav', 'menus', null, array('menu' => 'main')); ?>
+                    </div>
+                </div>
+                <!--Menu END-->
+            </div>
+        </div>
+        <!--Header END-->
+
+        <!--Toprow Begin-->
+        <div id="toprow">
+            <div class="center">
+		<?= $this->layout()->content ?>
+            </div>
+        </div>
+        <!--Toprow END-->
+
+        <!--MiddleRow Begin-->
+        <div id="midrow">
+
+        </div>
+        <!--MiddleRow END-->
+
+        <!--BottomRow Begin-->
+        <div id="bottomrow">
+
+        </div>
+
+
+        <!--BottomRow END-->
+
+        <!--Footer Begin-->
+        <div id="footer">
+            <div class="foot">
+                <span><a href="/admin">&copy;</a> 2010 BN Technology Group - All Rights Reserved</span>
+            </div>
+        </div>
+        <!--Footer END-->
+
+    </body>
+
+    
+
+</html>
