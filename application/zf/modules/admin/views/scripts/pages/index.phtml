@@ -1,0 +1,59 @@
+<?php foreach($this->message as $message){
+    echo '<h2>'.$message.'</h2>';
+}?>
+<a href="/admin/pages/add">Add Page</a>
+
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <?php foreach($this->model as $row): ?>
+        <tr>
+            <td style="text-transform: capitalize;"><?= str_replace('_',' ',$row->name); ?></td>
+            <?php if($row->external){ ?>
+                <td><?= $row->link; ?></td>
+            <?php }else{ ?>
+                <td><?= $row->title; ?></td>
+            <?php } ?>
+            
+                 
+            <?php
+            if($row->shown_menu){
+                if($row->active == 0){
+            ?>
+                    <td>
+                        <a href="/admin/pages/active/id/<?= $row->id; ?>" >Disabled</a>
+                    </td>
+            <?php 
+                }else{
+            ?>
+                    <td>
+                        <a href="/admin/pages/active/id/<?= $row->id; ?>" >Active</a>
+                    </td>
+            <?php
+                }
+            }else{
+                echo "<td>Active</td>";
+            }
+            ?>
+                    <td>
+                        <a href="/admin/pages/edit/id/<?= $row->id; ?>" >Edit</a>
+                    </td>
+        </tr>
+            
+    <?php endforeach; ?>
+    </tbody>
+        
+</table>
+
+
+
+
+

@@ -1,0 +1,16 @@
+<h1><?= $this->model->title;?></h1>
+<?= $this->model->body; ?>
+
+<table cellspacing="0">
+
+<?php foreach ($this->post as $post): ?>
+    <tr>
+        <td>
+            <h3><a href="/posts/view/item/<?= $post->title; ?>" > <?php echo str_replace('_', ' ', $post->title); ?> </a> </h3>
+            <?php echo $post->intro; ?>
+            <p><?= $post->created; ?></p>
+        </td>
+    </tr>
+<?php endforeach; ?>
+
+</table>

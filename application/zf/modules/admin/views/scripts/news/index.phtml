@@ -1,0 +1,45 @@
+<?php foreach($this->message as $message){
+    echo '<h2>'.$message.'</h2>';
+}?>
+<a href="/admin/news/add">Add News</a>
+
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Intro</th>
+            <th>Title</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <?php foreach($this->model as $row): ?>
+        <tr>
+            <td><?= $row->id; ?></td>
+            
+            <td><?= $row->intro; ?></td>
+           
+            <td><?= $row->title; ?></td>
+
+            <td><?= $row->created; ?></td>
+            
+            <?php if($row->active == 0): ?>
+            <td><a href="/admin/news/active/id/<?= $row->id; ?>" >Disabled</a></td>
+            <?php else: ?>
+            <td><a href="/admin/news/active/id/<?= $row->id; ?>" >Active</a></td>
+            <?php endif; ?>
+            <td><a href="/admin/news/edit/id/<?= $row->id; ?>" >Edit</a></td>
+        </tr>
+            
+    <?php endforeach; ?>
+    </tbody>
+        
+</table>
+
+
+
+
+

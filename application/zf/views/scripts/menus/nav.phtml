@@ -1,0 +1,47 @@
+<?php
+$this->headLink()->appendStylesheet('/css/menu.css');
+?>
+<ul>
+<?php
+foreach ($this->menus as $row):
+    $target = '_self';
+
+    if (is_null($row->link)) {
+        $url = '/page/' . $row->name;
+    } else {
+        if ($row->external) {
+            $target = '_blank';
+        }
+        $url = $row->link;
+    }
+
+    echo '<li><a href="' . $url . '" alt="' . $row->title . '" target="' . $target . '" >' . str_replace('_', ' ', $row->name) . ' </a></li>';
+
+    $i = 0;
+    foreach ($this->sub as $sub) {
+
+        if ($row->id == $sub->parent) {
+            if (!$i) {
+                echo '<ul>';
+                $i++;
+            }
+            $target = '_self';
+
+            if (is_null($sub->link)) {
+                $url = '/page/' . $sub->name;
+            } else {
+                if ($sub->external) {
+                    $target = '_blank';
+                }
+                $url = $sub->link;
+            }
+
+            echo '<li><a href="' . $url . '" alt="' . $sub->title . '" target="' . $target . '" >' . str_replace('_', ' ', $sub->name) . ' </a></li>';
+        }
+    }
+    if($i){
+        echo '</ul>';
+    }
+endforeach;
+?>
+</ul>

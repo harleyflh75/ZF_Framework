@@ -1,0 +1,11 @@
+<h1><?= $this->model->title;?></h1>
+<?= $this->model->body; ?>
+
+<?php foreach ($this->faqs as $faqs): ?>
+<dl>
+    <dt><a href="#" target="_blank"><?=$faqs->question; ?></a></dt>
+        <dl><?=$faqs->answer; ?></dl>
+ </dl>       
+  
+<?php endforeach; ?>
+

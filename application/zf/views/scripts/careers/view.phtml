@@ -1,0 +1,19 @@
+<h3>
+    <?php echo $this->job->title; ?>
+</h3>
+
+<p>
+    <?= $this->job->job_id; ?>
+</p>
+<p>
+    <?= $this->job->created; ?>
+</p>
+
+<?php echo $this->job->intro; ?>
+<?php echo $this->job->body; ?>
+
+<p>
+    <?= $this->job->contact; ?>
+</p>
+
+<a href="/careers/apply/job/<?= $this->job->job_id ?>">Apply</a>

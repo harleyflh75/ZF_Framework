@@ -1,0 +1,14 @@
+<h1><?= $this->model->title;?></h1>
+<?= $this->model->body; ?>
+
+<table cellspacing="0">
+
+<?php foreach ($this->links as $links): ?>
+    <tr>
+        <td><a href="<?= $links->url; ?>" target="_blank"><?=$links->name; ?></a></td>
+        <td><a href="<?= $links->url; ?>" target="_blank"><img src="/media/images/links/<?= $links->image; ?>" alt="<?= $links->name; ?>"</a></td>
+        
+    </tr>
+<?php endforeach; ?>
+
+</table>

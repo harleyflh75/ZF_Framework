@@ -1,0 +1,19 @@
+<?php $this->headScript()->appendFile('/js/ckeditor/ckeditor.js'); ?>
+
+
+<?= $this->message; ?>
+<?= $this->form; ?>
+
+
+<script type="text/javascript">
+    CKEDITOR.replace(('intro'),{
+
+        width: "50%"
+
+    });
+    CKEDITOR.replace(('body'),{
+
+        width: "70%"
+
+    });
+</script>
