@@ -1,0 +1,23 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <link href="/css/login.css" media="screen" rel="stylesheet" type="text/css" />
+<!-- All these variables are in Places/Controller/Plugin/ViewSetup.php  -->
+    <?php echo $this->HeadMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php //echo $this->headLink(); ?>
+    <?php echo $this->headScript(); ?>
+</head>
+<body >
+
+                <div id="content">
+                
+					<?= $this->layout()->content ?>
+
+				</div><!--End content-->
+   
+
+</body>
+
+
+</html>

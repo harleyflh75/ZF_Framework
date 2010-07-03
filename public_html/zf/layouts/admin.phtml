@@ -1,0 +1,104 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+    <head>
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headMeta() ?>
+        <?php echo $this->headLink() ?>
+        <?php echo $this->headStyle() ?>
+        <?php echo $this->headScript() ?>
+        <?php
+        if ($this->ckeditor) {
+            echo $this->headScript()->appendFile($this->baseUrl() . '/js/ckeditor/ckeditor.js');
+        }
+        ?>
+        <base href="/" />
+    </head>
+    <body>
+        <div id="search">
+            <input type="text" class="text" />
+            <input type="button" value="Search" class="button" />
+        </div>
+
+        <h1>ZF 1.10.5 Admin <span class="tagline">Heading</span><a href="/" target="_blank">Visit Site</a></h1>
+        <div id="bread">
+            <a href="/auth/logout">logout</a>
+        </div>
+
+        <div id="left">
+            <h3>Main Menu ::.</h3>
+            <ul>
+                <li>
+                    <a href="/admin/pages/" >pages </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/pages/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/news/" >news </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/news/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/posts/" >blog posts </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/posts/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/faqs/" >faqs </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/faqs/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/careers/" >jobs </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/careers/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/links/" >links </a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="/admin/links/add" >add </a>
+                    </li>
+                </ul>
+                <li>
+                    <a href="/admin/contacts/" >contacts </a>
+                </li>
+                
+            </ul>
+            <h3>Super Menu ::.</h3>
+                <li>
+                    <a href="/admin/users/" >users </a>
+                </li>
+                <li>
+                    <a href="/admin/departments/" >departments </a>
+                </li>
+        </div>
+        
+        <div id="content">
+            
+            <?= $this->layout()->content
+        ?>
+        </div>
+
+        <div id="footer">
+            <p>Contact  ::<a href="#">BN Technologies</a></p>
+
+        </div>
+    </body>
+</html>

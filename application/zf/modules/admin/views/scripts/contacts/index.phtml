@@ -1,0 +1,52 @@
+<?php foreach($this->message as $message){
+    echo '<h2>'.$message.'</h2>';
+   
+}
+
+if(count($this->model) != 0){
+
+?>
+
+
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Delete</th>
+            <th>Reply</th>
+            <th>View</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <?php foreach($this->model as $row): ?>
+        <tr>
+            <td><?= $row->id; ?></td>
+
+            <td><?= $row->name; ?></td>
+
+            <td><?= $row->email; ?></td>
+
+            <td><?= $row->created; ?></td>
+
+
+            <td><a href="/admin/contacts/active/id/<?= $row->id; ?>" >Delete</a></td>
+
+            <td><a href="/admin/contacts/reply/id/<?= $row->id; ?>" >Reply</a></td>
+
+            <td><a href="/admin/contacts/view/id/<?= $row->id; ?>" >View</a></td>
+        </tr>
+
+    <?php endforeach; ?>
+    </tbody>
+
+</table>
+<?php }else{
+    echo "No Contacts at this time.";
+
+
+}
+?>

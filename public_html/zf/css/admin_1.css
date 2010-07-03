@@ -1,0 +1,50 @@
+body {
+    height:100%;
+    text-align:center;
+}
+#wrapper{
+    width:100%;
+}
+dt{
+    font-size:large;
+}
+a {
+    color: #0000ff;
+    border: none;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+}
+a.active{
+    color:#ff0000;
+}
+a:hover.active{
+    color:green;
+}
+table{
+    width:100%;
+}
+table tr td{
+    padding:5px;
+}
+.no_link a{
+    color:black;
+}
+#header ul{
+    list-style:none;
+}
+.navigation li{
+    float:left;
+    padding:10px;
+}
+.navigation a{
+    color:red;
+}
+.navigation a:hover{
+    color:black;
+}
+.navigation a.active{
+    color:green;
+}
+

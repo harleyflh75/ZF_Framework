@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	padding: 0;
+	font: normal 82% sans-serif;
+}
+h1 {
+	margin: 0;
+	margin-bottom: 0px;
+	padding: 8px;
+	color: #ffffff;
+	background-color: #6d5d54;
+}
+.tagline {font-size: 60%; color: #ffffff;}
+
+#search {float: right; width: 280px; padding: 5px; text-align: right;}
+.button {border: outset 2px #000000; background-color: #909090; color: #ffffff; font-weight: bold;}
+.text {border: solid 1px #000000; background-color: #eeeeee;}
+
+#bread {margin-top: 0px; margin-bottom: 10px; padding: 5px; border-top: solid 1px #000000; border-bottom: solid 1px #000000; background-color: #909090; text-align: right;}
+#bread a {margin-left: 2px; margin-right: 2px; color: #000000; text-decoration: none;}
+#bread a:hover {text-decoration: underline;}
+
+#left {float: left; width: 18%; border: solid 1px #cccccc; margin-bottom: 15px; background-color: #ffffff; border-top: 0;}
+#left ul {list-style: none; margin: 0; padding: 0;}
+#left li {margin: 0px; padding: 2px 0 2px 0;}
+#left a {display: block; width: 100%; margin: 0px; padding: 0px; border: solid 1px #ffffff; color: #0066cc; text-decoration: none;}
+#left a:hover {border: solid 1px #0066cc; background-color: #0066cc; color: #ffffff;}
+#left h3 {margin: 0; padding: 2px; font-weight: normal; background-color: #c0c0c0; border-top: solid 1px #000000; border-bottom: solid 1px #000000;}
+
+#content {margin-left: 20%; padding: 0; border-left: solid 1px #cccccc; border-top: 0; border-bottom: solid 1px #ffffff;  background-color: #ffffff;}
+#content h3 {margin: 0; padding: 2px; font-weight: normal; background-color: #c0c0c0; border-top: solid 1px #000000; border-bottom: solid 1px #000000;}
+#content p {margin: 5px; color: #000000;}
+#content a {color: #0066cc; text-decoration: none;}
+#content a:hover {color: #0000ff; text-decoration: underline;}
+#content .point {margin: 3%; padding: 0px; border: solid 1px #000000; border-top: 0; background-color: #f9f9f9;}
+#content .point h3 {}
+#content .code {margin: 3%; padding: 7px; border: solid 1px #cccccc; background-color: #eeeeee; font: normal 100% courier; color: #000000;}
+
+#footer {clear: both; margin-top: 0px; padding: 5px; border: solid 1px #cccccc; background-color: #909090;}
+#footer p {float: left; margin: 0;}
+#footer h5 {margin: 0; text-align: right; color: #000000;}
+#footer a {margin-left: 2px; margin-right: 2px; color: #000000; text-decoration: none;}
+#footer a:hover {text-decoration: underline;}
+h1 a {
+    font-size: small;
+    text-decoration: none;
+    margin: 20px;
+    color: #CCCCCC;
+}

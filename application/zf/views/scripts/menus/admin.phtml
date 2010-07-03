@@ -1,0 +1,23 @@
+<div class="navigation">
+<ul>
+    <?php
+    foreach($this->menus as $row):
+        if(!$row->controller || $row->controller == ''){
+            echo '<li><a href="'.$row->uri.'" alt="'.$row->title.'" >'.$row->label.' </a></li>';
+        }else{
+//            $url1 = $this->url(array('controller'=>'news', 'action'=>'view','id'=>null,null,false));
+            if($row->module == 'default'){
+                $url = '/'.$row->controller.'/'.$row->action;
+                
+            }else{
+                $url = '/'.$row->module. '/'.$row->controller.'/'.$row->action;
+                
+            }
+//            $url = '/'.$row->controller.'/'.$row->action;
+            echo '<li><a href="'.$url.'" alt="'.$row->title.'" >'.$row->label.' </a></li>';
+        }
+    endforeach;
+//$this->view->url(array('controller'=>'place', 'action'=>'browse'), 'default', true);
+?>
+</ul>
+</div>

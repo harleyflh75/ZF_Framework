@@ -1,0 +1,48 @@
+<?php foreach($this->message as $message){
+    echo '<h2>'.$message.'</h2>';
+}?>
+<a href="/admin/careers/add">Add a Job</a>
+
+<table cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Job ID</th>
+            <th>Job Title</th>
+            <th>Order</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    <?php foreach($this->model as $row): ?>
+        <tr>
+            <td><?= $row->id; ?></td>
+            
+            <td><?= $row->job_id; ?></td>
+
+            <td><?= $row->title; ?></td>
+           
+            <td><?= $row->order; ?></td>
+
+            <td><?= $row->created; ?></td>
+            
+            <?php if($row->active == 0): ?>
+            <td><a href="/admin/careers/active/id/<?= $row->id; ?>" >Disabled</a></td>
+            <?php else: ?>
+            <td><a href="/admin/careers/active/id/<?= $row->id; ?>" >Active</a></td>
+            <?php endif; ?>
+            <td><a href="/admin/careers/edit/id/<?= $row->id; ?>" >Edit</a></td>
+        </tr>
+            
+    <?php endforeach; ?>
+    </tbody>
+        
+</table>
+
+
+
+
+
